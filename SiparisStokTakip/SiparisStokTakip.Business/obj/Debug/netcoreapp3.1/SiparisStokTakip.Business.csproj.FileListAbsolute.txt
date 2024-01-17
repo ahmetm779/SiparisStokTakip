@@ -1,0 +1,15 @@
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\bin\Debug\netcoreapp3.1\SiparisStokTakip.Business.deps.json
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\bin\Debug\netcoreapp3.1\SiparisStokTakip.Business.dll
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\bin\Debug\netcoreapp3.1\SiparisStokTakip.Business.pdb
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\bin\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.dll
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\bin\Debug\netcoreapp3.1\SiparisStokTakip.Entities.dll
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\bin\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.pdb
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\bin\Debug\netcoreapp3.1\SiparisStokTakip.Entities.pdb
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\obj\Debug\netcoreapp3.1\SiparisStokTakip.Business.csproj.AssemblyReference.cache
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\obj\Debug\netcoreapp3.1\SiparisStokTakip.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\obj\Debug\netcoreapp3.1\SiparisStokTakip.Business.AssemblyInfoInputs.cache
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\obj\Debug\netcoreapp3.1\SiparisStokTakip.Business.AssemblyInfo.cs
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\obj\Debug\netcoreapp3.1\SiparisStokTakip.Business.csproj.CoreCompileInputs.cache
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\obj\Debug\netcoreapp3.1\SiparisStokTakip.Business.csproj.CopyComplete
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\obj\Debug\netcoreapp3.1\SiparisStokTakip.Business.dll
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Business\obj\Debug\netcoreapp3.1\SiparisStokTakip.Business.pdb

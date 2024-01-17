@@ -1,0 +1,59 @@
+﻿@model IEnumerable<SiparisStokTakip.Entities.SiparisDetay>
+
+@{
+    ViewData["Title"] = "Sipariş Detayları";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="SiparisDetayEkle">Sipariş Detay Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SiparisID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UrunID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirimFiyat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.İndirimOrani)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SiparisID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrunID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirimFiyat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.İndirimOrani)
+            </td>
+            <td>
+                <a asp-action="SiparisDetayGuncelle" asp-route-id="@item.ID">Güncelle</a> |
+                @*<a asp-action="Details" asp-route-id="@item.ID">Details</a> |*@
+                <a asp-action="SiparisDetaySil" asp-route-id="@item.ID">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

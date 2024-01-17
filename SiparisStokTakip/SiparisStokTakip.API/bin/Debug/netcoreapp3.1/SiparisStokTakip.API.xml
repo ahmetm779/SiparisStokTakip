@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SiparisStokTakip.API</name>
+    </assembly>
+    <members>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.GetAllSiparisBilgileri">
+            <summary>
+            Bütün Sipariş Getirir
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.GetSiparisBilgileriById(System.Int32)">
+            <summary>
+            ID ye Göre Sipariş Getirir
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.CreateSiparisBilgileri(SiparisStokTakip.Entities.Siparis)">
+            <summary>
+            Sipariş Ekler
+            </summary>
+            <param name="siparis"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.UpdateSiparisBilgileri(SiparisStokTakip.Entities.Siparis)">
+            <summary>
+            Sipariş bilgilerini günceller
+            </summary>
+            <param name="siparis"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.DeleteSiparisBilgileri(System.Int32)">
+            <summary>
+            Sipariş Siler
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.GetAllSiparisDetayBilgileri">
+            <summary>
+            Bütün Sipariş Detay Getirir
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.GetSiparisDetayBilgileriById(System.Int32)">
+            <summary>
+            ID ye Göre Sipariş Detay Getirir
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.CreateSiparisDetayBilgileri(SiparisStokTakip.Entities.SiparisDetay)">
+            <summary>
+            Sipariş Detay Ekler
+            </summary>
+            <param name="siparisDetay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.UpdateSiparisDetayBilgileri(SiparisStokTakip.Entities.SiparisDetay)">
+            <summary>
+            Sipariş Detay bilgilerini günceller
+            </summary>
+            <param name="siparisDetay"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.DeleteSiparisDetayBilgileri(System.Int32)">
+            <summary>
+            Sipariş Detay Siler
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.GetAllTedarikciBilgileri">
+            <summary>
+            Bütün Tedarikçi Getirir
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.GetTedarikciBilgileriById(System.Int32)">
+            <summary>
+            ID ye Göre Tedarikci Getirir
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.CreateTedarikciBilgileri(SiparisStokTakip.Entities.Tedarikci)">
+            <summary>
+            Tedarikci Ekler
+            </summary>
+            <param name="tedarikci"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.UpdateTedarikciBilgileri(SiparisStokTakip.Entities.Tedarikci)">
+            <summary>
+            Tedarikci bilgilerini günceller
+            </summary>
+            <param name="tedarikci"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.DeleteTedarikciBilgileri(System.Int32)">
+            <summary>
+            Tedarikci Siler
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.GetAllUrunBilgileri">
+            <summary>
+            Bütün Ürün Getirir
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.GetUrunBilgileriById(System.Int32)">
+            <summary>
+            ID ye Göre Ürün Getirir
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.CreateUrunBilgileri(SiparisStokTakip.Entities.Urun)">
+            <summary>
+            Urun Ekler
+            </summary>
+            <param name="urun"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.UpdateUrunBilgileri(SiparisStokTakip.Entities.Urun)">
+            <summary>
+            Urun bilgilerini günceller
+            </summary>
+            <param name="urun"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.DeleteUrunBilgileri(System.Int32)">
+            <summary>
+            Urun Siler
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.GetAllKullaniciBilgileri">
+            <summary>
+            Bütün Kullanici Getirir
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.GetKullaniciBilgileriById(System.Int32)">
+            <summary>
+            ID ye Göre Kullanici Getirir
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.CreateKullaniciBilgileri(SiparisStokTakip.Entities.Kullanici)">
+            <summary>
+            Kullanici Ekler
+            </summary>
+            <param name="kullanici"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.UpdateKullaniciBilgileri(SiparisStokTakip.Entities.Kullanici)">
+            <summary>
+            Kullanici bilgilerini günceller
+            </summary>
+            <param name="kullanici"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SiparisStokTakip.API.Controllers.SiparisStokTakipController.DeleteKullaniciBilgileri(System.Int32)">
+            <summary>
+            Kullanici Siler
+            </summary>
+            <param name="id"></param>
+        </member>
+    </members>
+</doc>

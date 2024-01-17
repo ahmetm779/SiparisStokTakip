@@ -1,0 +1,58 @@
+﻿@model SiparisStokTakip.Entities.Siparis
+
+@{
+    ViewData["Title"] = "Siparişi Güncelle";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SiparisGuncelle">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="MusteriID" class="control-label"></label>
+                <input asp-for="MusteriID" class="form-control" />
+                <span asp-validation-for="MusteriID" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="UrunID" class="control-label"></label>
+                <input asp-for="UrunID" class="form-control" />
+                <span asp-validation-for="UrunID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiparisTarihi" class="control-label"></label>
+                <input asp-for="SiparisTarihi" class="form-control" />
+                <span asp-validation-for="SiparisTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToplamTutar" class="control-label"></label>
+                <input asp-for="ToplamTutar" class="form-control" />
+                <span asp-validation-for="ToplamTutar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiparisDurumu" class="control-label"></label>
+                <select asp-for="SiparisDurumu" class="form-control">
+                    <option value="Siparis">Sipariş Alındı</option>
+                    <option value="Hazırlanıyor">Hazırlanıyor</option>
+                    <option value="Sevkiyatta">Sevkiyatta</option>
+                    <option value="Tamamlandı">Tamamlandı</option>
+                </select>
+                <span asp-validation-for="SiparisDurumu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Güncelle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Siparisler">Siparişler Listesine Dön</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

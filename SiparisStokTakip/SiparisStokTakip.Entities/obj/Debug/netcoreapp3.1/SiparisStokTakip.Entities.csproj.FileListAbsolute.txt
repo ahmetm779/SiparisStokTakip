@@ -1,0 +1,10 @@
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Entities\bin\Debug\netcoreapp3.1\SiparisStokTakip.Entities.deps.json
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Entities\bin\Debug\netcoreapp3.1\SiparisStokTakip.Entities.dll
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Entities\bin\Debug\netcoreapp3.1\SiparisStokTakip.Entities.pdb
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Entities\obj\Debug\netcoreapp3.1\SiparisStokTakip.Entities.csproj.AssemblyReference.cache
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Entities\obj\Debug\netcoreapp3.1\SiparisStokTakip.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Entities\obj\Debug\netcoreapp3.1\SiparisStokTakip.Entities.AssemblyInfoInputs.cache
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Entities\obj\Debug\netcoreapp3.1\SiparisStokTakip.Entities.AssemblyInfo.cs
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Entities\obj\Debug\netcoreapp3.1\SiparisStokTakip.Entities.csproj.CoreCompileInputs.cache
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Entities\obj\Debug\netcoreapp3.1\SiparisStokTakip.Entities.dll
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.Entities\obj\Debug\netcoreapp3.1\SiparisStokTakip.Entities.pdb
