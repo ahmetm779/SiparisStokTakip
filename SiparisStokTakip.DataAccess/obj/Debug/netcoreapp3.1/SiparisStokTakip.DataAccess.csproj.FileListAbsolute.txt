@@ -1,0 +1,16 @@
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\bin\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.deps.json
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\bin\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.runtimeconfig.json
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\bin\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.runtimeconfig.dev.json
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\bin\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.dll
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\bin\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.pdb
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\bin\Debug\netcoreapp3.1\SiparisStokTakip.Entities.dll
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\bin\Debug\netcoreapp3.1\SiparisStokTakip.Entities.pdb
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\obj\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.csproj.AssemblyReference.cache
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\obj\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\obj\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.AssemblyInfoInputs.cache
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\obj\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.AssemblyInfo.cs
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\obj\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\obj\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.csproj.CopyComplete
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\obj\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.dll
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\obj\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.pdb
+C:\Users\100103\Desktop\Ders\SiparisStokTakip\SiparisStokTakip.DataAccess\obj\Debug\netcoreapp3.1\SiparisStokTakip.DataAccess.genruntimeconfig.cache

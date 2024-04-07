@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SiparisStokTakip.Entities.Siparis>
+
+@{
+    ViewData["Title"] = "Siparişlerim";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.MusteriID)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.SiparisTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToplamTutar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SiparisDurumu)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.MusteriID)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.SiparisTarihi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ToplamTutar)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SiparisDurumu)
+                </td>
+                <td>
+                    <a asp-action="SiparisGuncelle" asp-route-id="@item.ID">Güncelle</a> |
+                    <a asp-action="SiparisDetay" asp-route-id="@item.ID">Detay</a> |
+                    <a asp-action="SiparisSil" asp-route-id="@item.ID">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div>
+    <p>
+        @{
+            int toplam = 0; // toplam değişkenini tanımlayın ve başlangıç değeri olarak sıfır atayın
+            foreach (var fiyat in Model)
+            {
+                toplam += fiyat.ToplamTutar; // Her bir fiyatı toplama ekleyin
+            }
+        }
+        Toplam Sipariş Tutarı : @toplam.ToString("N0") TL@*Basamakları ayırarak toplamı gösterin*@
+    </p>
+</div>

@@ -1,0 +1,106 @@
+﻿@model IEnumerable<SiparisStokTakip.Entities.GelirGider>
+
+@{
+    ViewData["Title"] = "Gelir - Gider Listesi";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="GelirGiderEkle">Gider Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Malzeme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VerilenTL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VerilenUSD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlınanTL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlınanUSD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.USDAlirkenVergi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tarih)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Soyad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Malzeme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VerilenTL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VerilenUSD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlınanTL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlınanUSD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.USDAlirkenVergi)
+                </td>
+                <td>
+                    <a asp-action="GelirGiderGuncelle" asp-route-id="@item.ID">Güncelle</a> |
+                    <a asp-action="GelirGiderSil" asp-route-id="@item.ID">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<div>
+    <p>
+        @{
+            int verilenTL = 0; // toplam değişkenini tanımlayın ve başlangıç değeri olarak sıfır atayın
+            int alinanTL = 0;
+            int verilenUSD = 0;
+            int alinanUSD = 0;
+
+            foreach (var fiyat in Model)
+            {
+                verilenTL += fiyat.VerilenTL + fiyat.USDAlirkenVergi; // Her bir fiyatı toplama ekleyin
+                alinanTL += fiyat.AlınanTL;
+                verilenUSD += fiyat.VerilenUSD;
+                alinanUSD += fiyat.AlınanUSD;
+            }
+        }
+
+        @*  .ToString("N0") Sayıyı basamaklarına ayırarak gösterir*@
+        Toplam Gider Tutarı : @verilenTL.ToString("N0") TL | @verilenUSD.ToString("N0") USD <br />
+        Toplam Gelir Tutarı : @alinanTL.ToString("N0") TL |  @alinanUSD.ToString("N0") USD
+    </p>
+</div>

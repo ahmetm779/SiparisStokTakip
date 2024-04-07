@@ -1,0 +1,70 @@
+﻿@model SiparisStokTakip.Entities.GelirGider
+
+@{
+    ViewData["Title"] = "Gelir - Gider Güncelle";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="GelirGiderGuncelle">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Tarih" class="control-label"></label>
+                <input asp-for="Tarih" class="form-control" readonly/>
+                <span asp-validation-for="Tarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Soyad" class="control-label"></label>
+                <input asp-for="Soyad" class="form-control" />
+                <span asp-validation-for="Soyad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Malzeme" class="control-label"></label>
+                <input asp-for="Malzeme" class="form-control" />
+                <span asp-validation-for="Malzeme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VerilenTL" class="control-label"></label>
+                <input asp-for="VerilenTL" class="form-control" />
+                <span asp-validation-for="VerilenTL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VerilenUSD" class="control-label"></label>
+                <input asp-for="VerilenUSD" class="form-control" />
+                <span asp-validation-for="VerilenUSD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlınanTL" class="control-label"></label>
+                <input asp-for="AlınanTL" class="form-control" />
+                <span asp-validation-for="AlınanTL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlınanUSD" class="control-label"></label>
+                <input asp-for="AlınanUSD" class="form-control" />
+                <span asp-validation-for="AlınanUSD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="USDAlirkenVergi" class="control-label"></label>
+                <input asp-for="USDAlirkenVergi" class="form-control" />
+                <span asp-validation-for="USDAlirkenVergi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Güncelle" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="GelirGider" asp-action="GelirGiderListele">Gelir Gider Listesine Dön</a>
+</div>
+

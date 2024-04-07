@@ -1,0 +1,75 @@
+﻿@model IEnumerable<SiparisStokTakip.Entities.Urun>
+
+@{
+    ViewData["Title"] = "Ürünler";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (User.Identity.IsAuthenticated && User.IsInRole("Yönetici"))
+{
+    <p>
+        <a asp-action="UrunEkle">Yeni Ürün Ekle</a>
+    </p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirimFiyati)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StokMiktari)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MinimumMiktari)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TedarikciID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirimFiyati)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StokMiktari)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MinimumMiktari)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TedarikciID)
+                </td>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Müşteri") || User.IsInRole("Yönetici"))
+                {
+                    <td>
+                        <p>
+                            <a asp-action="SiparisEkle" asp-route-UrunID="@item.UrunID">Sipariş Ver</a>
+                        </p>
+                    </td>
+                }
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Yönetici"))
+                {
+                    <td>
+                        <a asp-action="UrunGuncelle" asp-route-id="@item.UrunID">Güncelle</a> |
+                        <a asp-action="UrunSil" asp-route-id="@item.UrunID">Sil</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+

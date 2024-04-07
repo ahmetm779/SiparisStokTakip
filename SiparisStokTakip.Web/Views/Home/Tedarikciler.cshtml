@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SiparisStokTakip.Entities.Tedarikci>
+
+@{
+    ViewData["Title"] = "Tedarikciler";
+}
+
+<h1>Tedarikçiler</h1>
+
+<p>
+    <a asp-action="TedarikciEkle">Yeni Tedarikçi Ekle</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefon)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefon)
+            </td>
+            <td>
+                <a asp-action="TedarikciGuncelle" asp-route-id="@item.ID">Güncelle</a> |
+                @*<a asp-action="Details" asp-route-id="@item.ID">Details</a> |*@
+                <a asp-action="TedarikciSil" asp-route-id="@item.ID">Sil</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
