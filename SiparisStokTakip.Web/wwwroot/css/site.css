@@ -69,3 +69,64 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+
+
+
+
+
+
+
+
+
+/* Style the tab */
+.tab {
+    float: left;
+    /*border: 1px solid #ccc;*/
+    /* background-color: #f1f1f1;*/
+    width: 10%;
+    height: 800px;
+}
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        display: block;
+        background-color: inherit;
+        color: black;
+        padding: 12px 16px;
+        width: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 17px;
+        border-radius: 30px;
+        margin-top: 5px;
+    }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: rgba(6, 178, 201, 1);
+            color: white;
+            /*background-color: #ddd;*/
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+            background-color: rgba(6, 178, 201, 1);
+            color: white;
+            /* background-color: #ccc;*/
+        }
+
+
+.tabcontent {
+    float: left;
+    padding: 10px 50px;
+    /* border: 1px solid #ccc;*/
+    width: 90%;
+    border-left: none;
+    height: 800px;
+    text-align: justify;
+}

@@ -4,63 +4,227 @@
     ViewData["Title"] = "Siparişlerim";
 }
 
-<h1>@ViewData["Title"]</h1>
 
+<body>
 
-<table class="table">
-    <thead>
-        <tr>
-            @*<th>
-                    @Html.DisplayNameFor(model => model.MusteriID)
-                </th>*@
-            <th>
-                @Html.DisplayNameFor(model => model.SiparisTarihi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ToplamTutar)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SiparisDurumu)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                @*<td>
-                        @Html.DisplayFor(modelItem => item.MusteriID)
-                    </td>*@
-                <td>
-                    @Html.DisplayFor(modelItem => item.SiparisTarihi)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ToplamTutar)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SiparisDurumu)
-                </td>
-                <td>
-                    <a asp-action="SiparisGuncelle" asp-route-id="@item.ID">Güncelle</a> |
-                    <a asp-action="SiparisDetay" asp-route-id="@item.ID">Detay</a> |
-                    <a asp-action="SiparisSil" asp-route-id="@item.ID">Sil</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <div class="mt-5 tab">
+        <button class="tablinks" onclick="openPlatform(event, 'Siparislerim')" id="defaultOpen">Siparişlerim</button>
+        <button class="tablinks" onclick="openPlatform(event, 'TamamlananSiparislerim')">Tamamlanan Siparişlerim</button>
+        <button class="tablinks" onclick="openPlatform(event, 'IptalEdilenSiparislerim')">İptal Edilen Siparişlerim</button>
+    </div>
 
+    <div id="Siparislerim" class="tabcontent">
+        <h1 class="mt-5 text-center">@ViewData["Title"]</h1>
+        <table class=" mt-4 table">
+            <thead>
+                <tr>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.MusteriID)
+                        </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.SiparisTarihi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ToplamTutar)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SiparisDurumu)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    if (item.SiparisDurumu != "Tamamlandı" && item.SiparisDurumu != "İptal")
+                    {
+                        <tr>
+                            @*<td>
+                                    @Html.DisplayFor(modelItem => item.MusteriID)
+                                </td>*@
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SiparisTarihi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ToplamTutar)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SiparisDurumu)
+                            </td>
+                            <td>
+                                <a asp-action="SiparisGuncelle" asp-route-id="@item.ID">Güncelle</a> |
+                                <a asp-action="SiparisDetay" asp-route-id="@item.ID">Detay</a> |
+                                <a asp-action="SiparisSil" asp-route-id="@item.ID">Sil</a>
+                            </td>
+                        </tr>
+                    }
 
-<div>
-    <p>
-        @{
-            int toplam = 0; // toplam değişkenini tanımlayın ve başlangıç değeri olarak sıfır atayın
-            foreach (var fiyat in Model)
-            {
-                toplam += fiyat.ToplamTutar; // Her bir fiyatı toplama ekleyin
+                }
+            </tbody>
+        </table>
+        <div>
+            <p>
+                @{
+                    int toplam = 0; // toplam değişkenini tanımlayın ve başlangıç değeri olarak sıfır atayın
+                    foreach (var fiyat in Model)
+                    {
+                        if (fiyat.SiparisDurumu != "Tamamlandı" && fiyat.SiparisDurumu != "İptal")
+                        {
+                            toplam += fiyat.ToplamTutar; // Her bir fiyatı toplama ekleyin
+                        }
+                    }
+                }
+                Toplam Sipariş Tutarı : @toplam.ToString("N0") TL@*Basamakları ayırarak toplamı gösterin*@
+            </p>
+        </div>
+    </div>
+
+    <div id="TamamlananSiparislerim" class="tabcontent">
+        <h1 class="mt-5 text-center">Tamamlanan @ViewData["Title"]</h1>
+        <table class="mt-4 table">
+            <thead>
+                <tr>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.MusteriID)
+                        </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.SiparisTarihi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ToplamTutar)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SiparisDurumu)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    if (item.SiparisDurumu == "Tamamlandı")
+                    {
+                        <tr>
+                            @*<td>
+                                    @Html.DisplayFor(modelItem => item.MusteriID)
+                                </td>*@
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SiparisTarihi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ToplamTutar)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SiparisDurumu)
+                            </td>
+                            <td>
+                                <a asp-action="SiparisGuncelle" asp-route-id="@item.ID">Güncelle</a> |
+                                <a asp-action="SiparisDetay" asp-route-id="@item.ID">Detay</a> |
+                                <a asp-action="SiparisSil" asp-route-id="@item.ID">Sil</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <div>
+            <p>
+                @{
+                    int tamamlanan = 0; // toplam değişkenini tanımlayın ve başlangıç değeri olarak sıfır atayın
+                    foreach (var fiyat in Model)
+                    {
+                        if (fiyat.SiparisDurumu == "Tamamlandı")
+                        {
+                            tamamlanan += fiyat.ToplamTutar; // Her bir fiyatı toplama ekleyin
+                        }
+                    }
+                }
+                Tamamlanan Sipariş Tutarı : @tamamlanan.ToString("N0") TL@*Basamakları ayırarak toplamı gösterin*@
+            </p>
+        </div>
+    </div>
+
+    <div id="IptalEdilenSiparislerim" class="tabcontent">
+        <h1 class="mt-5 text-center">İptal Edilen @ViewData["Title"]</h1>
+        <table class="mt-4 table">
+            <thead>
+                <tr>
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.MusteriID)
+                        </th>*@
+                    <th>
+                        @Html.DisplayNameFor(model => model.SiparisTarihi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ToplamTutar)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SiparisDurumu)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    if (item.SiparisDurumu == "İptal")
+                    {
+                        <tr>
+                            @*<td>
+                                    @Html.DisplayFor(modelItem => item.MusteriID)
+                                </td>*@
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SiparisTarihi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ToplamTutar)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SiparisDurumu)
+                            </td>
+                            <td>
+                                <a asp-action="SiparisGuncelle" asp-route-id="@item.ID">Güncelle</a> |
+                                <a asp-action="SiparisDetay" asp-route-id="@item.ID">Detay</a> |
+                                <a asp-action="SiparisSil" asp-route-id="@item.ID">Sil</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <div>
+            <p>
+                @{
+                    int iptal = 0; // iptal değişkenini tanımlayın ve başlangıç değeri olarak sıfır atayın
+                    foreach (var fiyat in Model)
+                    {
+                        if (fiyat.SiparisDurumu == "İptal")
+                        {
+                            iptal += fiyat.ToplamTutar; // Her bir fiyatı iptal e ekleyin
+                        }
+                    }
+                }
+                Tamamlanan Sipariş Tutarı : @iptal.ToString("N0") TL@*Basamakları ayırarak iptal toplamını gösterin*@
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function openPlatform(evt, platform) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(platform).style.display = "block";
+            evt.currentTarget.className += " active";
         }
-        Toplam Sipariş Tutarı : @toplam.ToString("N0") TL@*Basamakları ayırarak toplamı gösterin*@
-    </p>
-</div>
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>

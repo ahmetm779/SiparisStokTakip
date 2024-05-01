@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "SiparisStokTakip.DataAccess": {
+      "commandName": "Executable"
+    }
+  }
+}
